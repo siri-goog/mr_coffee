@@ -1,0 +1,105 @@
+/*-- Responsive layout --*/
+/*-- When the screen smaller, make the two columns stack on top of each other instead of next to each other and adjust the elements size --*/
+  
+  /*-- media query for display: under 800 --*/
+  @media screen and (max-width: 800px) {
+    .header, .footer {   
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /*== Header ==*/
+    /*---- Logo ----*/
+    #header-logo {
+      width: 25%;
+      margin: 3% 0 3% 0;
+      padding-left: 0;
+    }
+    /*---- Navigation bar ----*/
+    #header-nav {
+        font-size: medium;
+        margin: 0;
+        padding: 0;
+    }
+
+    /*== Content ==*/
+    /*---- Page: content ----*/
+    #content-img-h1 {
+      font-size: x-small;
+      padding: 0;
+      margin: 0;
+      height: 500px;
+    }
+    h1 {
+      font-size: x-large;
+    }
+    #open img {
+      height: 20%;
+    }
+    .font-size-26 {
+      font-size: x-large;
+    }
+    .column-two div {
+      width: 5%;
+      margin: 0% 3% 3% 3%;
+      padding: 0% 3% 3% 3%;
+    }
+    .column-two div p{
+        font-size: medium;
+    }
+    .font-size-32 {
+        font-size: xx-large;
+    }
+    
+    /*---- Page: about.html ----*/
+    .side {
+      flex: 50%;
+      padding: 5%;
+      padding-bottom: 0;
+    }
+    .main {
+      flex: 50%;
+      padding: 5%;
+    }
+
+    /*---- Page: contact.html ----*/
+    .map {
+      width: 550px;
+      height: 300px;
+    }
+
+    /*-- Footer --*/
+    #footer-logo{
+      width: 25%;
+      margin-top: 3%;
+      padding-left: 0;
+      text-align: center;
+    }
+    #footer-social img{
+        width: 10%;
+        margin: 0 0 3% 0;
+      }
+  }
+
+  /*-- media query for display: under 400 --*/
+  @media screen and (max-width: 400px){
+    /*-- Header --*/
+    /*---- Logo ----*/
+    #header-logo {
+      width: 30%;
+      margin-top: 3%;
+    }
+    /*---- Navigation bar ----*/
+    #header-nav {
+        font-size: small;
+        margin: 0;
+        padding: 0;
+    }
+    /*---- Page: contact.html ----*/
+    .map {
+        width: 350px;
+        height: 100px;
+      }
+  }

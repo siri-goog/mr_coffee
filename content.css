@@ -1,0 +1,141 @@
+/*-- Content --*/
+  /*== Page: index.html ==*/
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+  }
+  /*---- Logo ----*/
+  #content-logo {
+    width: 20%;
+  }
+  /*---- Image ----*/
+  #content-img {
+    width: 90%;
+  }
+  /*---- Text in Image ----*/
+  #content-img-h1 h1 {
+    color: white;
+    text-align: center;
+  }
+  #content-img-h1 {
+    color: white;
+    text-align: center;
+    background-image: url('/Assets/mr_coffee_salle.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+    height: 800px;
+  }
+  /*---- Content: 3 columns ----*/
+  .column-three {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .column-three div {
+    background-color: #bbc2c9;
+    text-align: center;
+    margin:1%;
+    padding: 2%;
+    width: 30%;
+  }
+  .column-three-img {
+    width: 30%;
+  }
+  /*---- Button ----*/
+  button {
+    margin: 5%;
+  }
+  /*---- Content: open ----*/
+  #open {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    margin-left: 10%; 
+  }
+  #open img {
+    width: 10%;
+  }
+  /*---- Content: 2 columns ----*/
+  .column-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+  .column-two div {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 40%;
+  }
+  .column-two div p{
+    margin-top: 20%;
+  }
+  /*---- Content: a ----*/
+  #content-a {
+    color: #6a7b8b;
+    text-decoration: none;
+  }
+  /*---- Button ----*/
+  button {
+    background-color: #6a7b8b;
+    border: none;
+    color: white;
+    padding: 2% 7% 2% 7%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px grey;
+  }
+
+
+  /*== Page: about.html ==*/
+  /* Column container */
+  .row {  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* Image column */
+  .side {
+    flex: 30%;
+    padding: 5%;
+  }
+  .side img {
+    width: 90%;
+    height: 90%;
+  }
+  /* Content column */
+  .main {
+    flex: 50%;
+    padding: 5%;
+  }
+
+
+  /*== Page: contact.html ==*/
+  #content-contact {
+    align-self: flex-start;
+    margin-left: 25%;
+  }
+  .map {
+    margin: 10% 0 5% 0;
+    padding: 0;
+    width: 750px;
+    height: 500px;
+    align-self: flex-start;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b2b2b2;
+  }
