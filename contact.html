@@ -1,132 +1,123 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Nous contacter</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Mr. Coffee">
-        <meta name="description" content="">
-        <meta name="keywords" content="Coffee" />
-        <!-- References to external CSS files -->
-        <link href="application.css" rel="stylesheet" />
-        <link href="responsive.css" rel="stylesheet" />
-        <link href="content.css" rel="stylesheet" />
-        <link href="form.css" rel="stylesheet" />
-        <!-- References to external font-style -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&display=swap" rel="stylesheet">
-        <!-- References to external JavaScript files -->
-        <script src="form.js"></script>
-    </head>
-    <body class="container-popup">
+<html lang="fr">
+<head>
+    <title>Nous contacter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Mr. Coffee">
+    <meta name="description" content="Mr. Coffee, Coffee shop">
+    <meta name="keywords" content="Coffee, Coffee shop, Mr. Coffee" />
+    <!-- References to external CSS files -->
+    <link href="application.css" rel="stylesheet" />
+    <link href="content.css" rel="stylesheet" />
+    <link href="responsive.css" rel="stylesheet" />
+    <link href="form.css" rel="stylesheet" />
+    <!-- References to external font-style -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&display=swap" rel="stylesheet">
+    <!-- References to external JavaScript files -->
+    <script src="form.js"></script>
+</head>
 
-        <!-- Header -->
-        <header class="header">
-            <!-- Logo -->
-            <img id="header-logo" src="Assets/full_logo_white.png" alt="Mr. Coffee logo with the text MR. COFFEE in white color">
-            <!-- Navigation -->
-            <div id="header-nav">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="about.html">Qui sommes-nous?</a></li>
-                        <li><a href="contact.html">Nous contacter</a></li>
-                    </ul>
-                </nav>
+<body>
+
+<!-- Header -->
+<header>
+  <img id="header-logo" src="Assets/full_logo_white.png" alt="Mr. Coffee logo with the text MR. COFFEE in white color">
+  <div id="header-nav">
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">Qui sommes-nous?</a></li>
+            <li><a href="contact.html">Nous contacter</a></li>
+        </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Popup -->
+<div class="content" id="popup">
+  <form class="form-popup" action="contact.html">
+    <h1>MERCI</h1>
+    <p>Votre message a bien été envoyé !</p>
+    <p>Nous essaierons d’y répondre au mieux dans les plus brefs
+      délais. À bientot chez Mr.Coffee</p>
+    <button class="font-size-26" onclick="close()">FERMER</button>
+  </form>
+</div>
+
+<!-- Content -->
+<section id="content">
+  <img id="content-logo" src="Assets/logo_mrcoffee.png" alt="Mr. Coffee's logo with the text MR. COFFEE in black color">
+  <!-- Form -->
+  <section class="form-submit" id="submit">
+    <form>
+        <h1>Dites nous tout !</h1>
+        <div id="form-input">
+            <!-- Firstname -->
+            <div class="label">
+                <label for="firstname">Nom *:</label>
+                <label class="alert" id="alertFName"></label>
+                <br>
             </div>
-        </header>
-
-        <section class="content">
-            <!-- Logo -->
-            <img id="content-logo" src="Assets/logo_mrcoffee.png" alt="">
-        </section>
-
-        <!-- Popup -->
-        <div class="content" id="popup">
-            <form class="form-popup" action="contact.html">
-              <img></img>
-              <h1>MERCI</h1>
-              <p>Votre message a bien été envoyé !</p>
-              <p>Nous essaierons d’y répondre au mieux dans les plus brefs
-                délais. À bientot chez Mr.Coffee</p>
-              <button class="font-size-26" onclick="close()">FERMER</button>
-            </form>
+            <input type="text" id="firstname" name="firstname"><br>
+            <!-- Lastname -->
+            <div class="label">
+                <label for="lastname">Prénom *:</label>
+                <label class="alert" id="alertLName"></label>
+                <br>
+            </div>
+            <input type="text" id="lastname" name="lastname"><br>
+            <!-- Phone -->
+            <div class="label">
+                <label for="phone">Téléphone *:</label>
+                <label class="alert" id="alertPhone"></label>
+                <br>
+            </div>
+            <input type="text" id="phone" name="phone"><br>
+            <!-- Email -->
+            <div class="label">
+                <label for="email">Adresse mail *:</label>
+                <label class="alert" id="alertEmail"></label>
+                <br>
+            </div>
+            <input type="email" id="email" name="email"><br>
+            <!-- Message -->
+            <div class="label">
+                <label for="message">Message *:</label>
+                <label class="alert" id="alertMsg"></label>
+                <br>
+            </div>
+            <textarea id="message" name="message" placeholder="Tapez votre message ici" style="height:200px"></textarea>
         </div>
+    </form>
+    <button id="submitBtn" class="p-font-size-medium" onclick="submit()">ENVOYER</button>
+  </section>
+  <h1>On vous attend !</h1>
+  <div class="content-one-column-left">
+    <p class="p-font-size-medium no-line-space"><strong>Mr.Coffee</strong></p>
+    <p class="p-font-size-medium no-line-space">15 place Jules Guesde</p>
+    <p class="p-font-size-medium no-top-space">75006 Paris</p>
+    <p class="p-font-size-medium no-line-space">Tel : +33 9 46 25 78 45</p>
+    <p class="p-font-size-medium no-line-space">Mail : contact@mr-coffee.com</p>
+  </div>
+  <!-- Map -->
+  <div id="map">
+    <iframe class="map" src="//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1313.0688333968233!2d2.319705261084419!3d48.836512715907986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671b5590a00b1%3A0x2711ee015c1c2b2e!2s15%20Rue%20Jules%20Guesde%2C%2075014%20Paris%2C%20France!5e0!3m2!1sen!2sau!4v1611740879513!5m2!1sen!2sau" 
+      allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
+</section>
 
-        <!-- Form -->
-        <section class="content form-submit" id="submit">
-            <form>
-                <h1>Dites nous tout !</h1>
-                <div id="form-input">
-                    <!-- Firstname -->
-                    <div class="label">
-                        <label for="firstname">Nom *:</label>
-                        <label class="alert" id="alertFName"></label>
-                        <br>
-                    </div>
-                    <input type="text" id="firstname" name="firstname"><br>
-                    <!-- Lastname -->
-                    <div class="label">
-                        <label for="lastname">Prénom *:</label>
-                        <label class="alert" id="alertLName"></label>
-                        <br>
-                    </div>
-                    <input type="text" id="lastname" name="lastname"><br>
-                    <!-- Phone -->
-                    <div class="label">
-                        <label for="phone">Téléphone *:</label>
-                        <label class="alert" id="alertPhone"></label>
-                        <br>
-                    </div>
-                    <input type="text" id="phone" name="phone"><br>
-                    <!-- Email -->
-                    <div class="label">
-                        <label for="email">Adresse mail *:</label>
-                        <label class="alert" id="alertEmail"></label>
-                        <br>
-                    </div>
-                    <input type="email" id="email" name="email"><br>
-                    <!-- Message -->
-                    <div class="label">
-                        <label for="message">Message *:</label>
-                        <label class="alert" id="alertMsg"></label>
-                        <br>
-                    </div>
-                    <textarea id="message" name="message" placeholder="Tapez votre message ici" style="height:200px"></textarea>
-                </div>
-            </form>
-            <button id="submitBtn" class="font-size-26" onclick="submit()">ENVOYER</button>
-        </section>
+<!-- Footer -->
+<footer>
+  <img src="Assets/logo_blanc.png" alt="Mr. Coffee logo in white color">
+  <div id="footer-social">
+      <p>Suivez nous sur les réseaux sociaux !</p>
+      <a href="#"><img src="Assets/logo_linkedin.png" alt="White Linkedin logo"></a>
+      <a href="#"><img src="Assets/logo_twitter.png" alt="White Twitter logo"></a>
+      <a href="#"><img src="Assets/logo_facebook.png" alt="White Facebook logo"></a>
+  </div>
+</footer>
 
-        <!-- Content -->
-        <section class="content">
-            <h1>On vous attend !</h1>
-            <div id="content-contact">
-                <p class="font-size-24 no-line-space"><strong>Mr.Coffee</strong></p>
-                <p class="font-size-24 no-line-space">15 place Jules Guesde</p>
-                <p class="font-size-24 no-top-space">75006 Paris</p>
-                <p class="font-size-24 no-line-space">Tel : +33 9 46 25 78 45</p>
-                <p class="font-size-24 no-line-space">Mail : contact@mr-coffee.com</p>
-            </div>
-            <!-- Map -->
-            <div id="map">
-                <iframe class="map" src="//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1313.0688333968233!2d2.319705261084419!3d48.836512715907986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671b5590a00b1%3A0x2711ee015c1c2b2e!2s15%20Rue%20Jules%20Guesde%2C%2075014%20Paris%2C%20France!5e0!3m2!1sen!2sau!4v1611740879513!5m2!1sen!2sau" 
-                  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div id="footer-logo">
-                <img src="Assets/logo_blanc.png" alt="Mr. Coffee logo in white color">
-            </div>
-            <div id="footer-social">
-                <p>Suivez nous sur les réseaux sociaux !</p>
-                <a href="#"><img src="Assets/logo_linkedin.png"></a>
-                <a href="#"><img src="Assets/logo_twitter.png"></a>
-                <a href="#"><img src="Assets/logo_facebook.png"></a>
-            </div>
-        </footer>
-
-    </body>
+</body>
 </html>
