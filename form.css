@@ -1,9 +1,18 @@
 /* The submit form */
+.form-submit {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .form-submit h1 {
     text-align: center;
+    margin: 0 0 3% 0;
+    padding: 0;
 }
 .form-submit form {
-    width: 50%;
+    width: 70%;
     text-align: left;
 }
 input[type=text], input[type=number], input[type=email], textarea {
